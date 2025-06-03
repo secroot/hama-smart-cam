@@ -1,0 +1,1 @@
+# hama-smart-cam
