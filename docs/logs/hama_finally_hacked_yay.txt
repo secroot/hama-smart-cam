@@ -1,0 +1,677 @@
+15A 
+
+
+U-Boot 2013.10.0-V3.1.28_bchV1.0.00 (Apr 12 2023 - 14:09:26)
+
+DRAM:  64 MiB
+efuse_read:0x00000006
+8 MiB
+sd detect gpio mode:84!
+mmc_sd: 0
+In:    serial
+Out:   serial
+Err:   serial
+Net:   led init.
+red led init:1.
+No ethernet found.
+MMC: detect card present
+mmc/sd share pin!
+mmc_start_init: init OK!
+cdh:sd card, mmc->capacity_user:0x7760000000 blocks!
+cdh:mmc->capacity:0x7760000000 !
+cdh:test_part_dos read ok!
+cdh:test_part_dos DOS_PART_MAGIC_OFFSET ok!
+cdh:test_part_dos DOS_MBR ok!
+reading ht_recover_fw.conf
+** Unable to read file ht_recover_fw.conf **
+ht_recover_fw.conf not found
+KERNEL: size:0x00180000, offset:0x00040000
+
+SF: 1572864 bytes @ 0x40000 Read: OK
+## Booting kernel from Legacy Image at 80008000 ...
+   Image Name:   Linux-4.4.192V2.1
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1570664 Bytes = 1.5 MiB
+   Load Address: 80008000
+   Entry Point:  80008040
+   Verifying Checksum ... OK
+   XIP Kernel Image ... OK
+   kernel loaded at 0x80008000, end = 0x80187768
+using: FDT
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Linux version 4.4.192V2.1 (hutong@ubuntu) (gcc version 4.9.4 (Buildroot 2018.02.7_V1.0.03-g9ff3371) ) #1 Wed Apr 27 10:24:15 CST 2022
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=0005317f
+CPU: VIVT data cache, VIVT instruction cache
+Machine model: ak3918ev330 dev board
+Memory policy: Data cache writeback
+ANYKA CPU AK39XXEV330 (ID 0x20160101)
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttySAK0,115200n8 root=/dev/mtdblock5 rootfstype=squashfs init=/sbin/init mtdparts=spi0.0:200K@0x0(UBOOT),4K@0x32000(ENV),4K@0x33000(ENVBK),48K@0x34000(DTB),1536K@0x40000(KERNEL),1024K@0x1C0000(ROOTFS),256K@0x2C0000(CONFIG),5120K@0x300000(APP) mem=64M memsize=64M
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 35588K/65536K available (3078K kernel code, 116K rwdata, 980K rodata, 132K init, 188K bss, 29948K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc4800000 - 0xff800000   ( 944 MB)
+    lowmem  : 0xc0000000 - 0xc4000000   (  64 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc03fed44   (4060 kB)
+      .init : 0xc03ff000 - 0xc0420000   ( 132 kB)
+      .data : 0xc0420000 - 0xc043d150   ( 117 kB)
+       .bss : 0xc043d150 - 0xc046c2d8   ( 189 kB)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:126
+ak39ev330_clk: CPU(JCLK): 708(Mhz) 
+ak39ev330_clk: MEMDDR2(DPHY): 354(Mhz) 
+ak39ev330_clk: VCLK: 320(Mhz)
+ak-timer: ak_timer_init
+clocksource: ak_cs_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 159271703898 ns
+sched_clock: 32 bits at 12MHz, resolution 83ns, wraps every 178956970966ns
+Calibrating delay loop... 351.43 BogoMIPS (lpj=1757184)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80008400 - 0x8000843c
+devtmpfs: initialized
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+On-chip L2 memory initialized
+ak-pinctrl 20170000.gpio: ak_pinctrl_probe 1958
+ak_ev330_pinctrl: ak_pinctrl_probe irq: 15
+media: Linux media interface: v0.10
+Linux video capture interface: v2.00
+clocksource: Switched to clocksource ak_cs_timer
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. Â 2001-2006 Red Hat, Inc.
+jitterentropy: Initialization failed with host not compliant with requirements: 2
+io scheduler noop registered (default)
+AKxx uart driver init, (c) 2013 ANYKA
+20130000.uart0: ttySAK0 at MMIO 0x20130000 (irq = 10, base_baud = 10000000) is a AK
+console [ttySAK0] enabled
+loop: module loaded
+Start to init Anyka SPI Flash...
+init Anyka SPI Nand Flash driver
+spi0 new hz is 40000000, div is 2(change).
+ak spiflash probe enter.
+akspi flash ID: 0x00204017
+ak-spiflash spi0.0: xm25qh64c (16384 Kbytes)
+8 cmdlinepart partitions found on MTD device spi0.0
+Creating 8 MTD partitions on "spi0.0":
+0x000000000000-0x000000032000 : "UBOOT"
+0x000000032000-0x000000033000 : "ENV"
+0x000000033000-0x000000034000 : "ENVBK"
+0x000000034000-0x000000040000 : "DTB"
+0x000000040000-0x0000001c0000 : "KERNEL"
+0x0000001c0000-0x0000002c0000 : "ROOTFS"
+0x0000002c0000-0x000000300000 : "CONFIG"
+0x000000300000-0x000000800000 : "APP"
+Init AK SPI Flash finish.
+akspi master SPI0 initialize success, use for PIO mode.
+i2c /dev entries driver
+ak_wdt_init: watchdog register...
+NET: Registered protocol family 17
+sctp: Hash tables configured (established 512 bind 1024)
+
+VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+devtmpfs: mounted
+Freeing unused kernel memory: 132K
+mount all file system...
+**************************
+    Love Linux ! ! ! 
+**************************
+/bin/mount -t squashfs /dev/mtdblock7 /usr
+/bin/mount -t jffs2 /dev/mtdblock6 /etc/config
+starting mdev...
+
+anyka login: hwclock: RTC_RD_TIME: Invalid argument
+install sc2336 mipi driver
+sc2336_probe Apr 21 2023 16:46:59
+id:cb3a
+i2c i2c-0: sc2336 Probed success, subdev:c30aba14
+ak_uio: register uio device successfully with irq: 2!
+ak_motor_probe
+ak_motor_probe
+No TF-Card for F/W Update.
+  Current Bundle: HT_IPC286KS2M_TUYA_AK3918EV330
+  TF-Card F/W Bundle: 
+
+sh: =: argument expected
+  Current Bundle: HT_IPC286KS2M_TUYA_AK3918EV330
+  TF-Card F/W Bundle: 
+
+sh: =: argument expected
+  Current Bundle: HT_IPC286KS2M_TUYA_AK3918EV330
+  TF-Card F/W Bundle: 
+
+sh: =: argument expected
+      Current FileName: /mnt/update.bin
+
+No F/W in TF-Card for Update.
+rm: can't remove '/etc/config/shadow': No such file or directory
+0+0 records in
+0+0 records out
+0 bytes (0B) copied, 0.000403 seconds, 0B/s
+Load Factory File.
+cp: can't stat '/mnt/shadow': No such file or directory
+0+0 records in
+0+0 records out
+0 bytes (0B) copied, 0.000440 seconds, 0B/s
+Load AP Mode File.
+cp: can't stat '/mnt/hostapd': No such file or directory
+0+0 records in
+0+0 records out
+0 bytes (0B) copied, 0.000426 seconds, 0B/s
+Load AV Ctrl Mode File.
+cp: can't stat '/mnt/shadow': No such file or directory
+0+0 records in
+0+0 records out
+0 bytes (0B) copied, 0.000413 seconds, 0B/s
+wifi run ap mode
+killall: wpa_supplicant: no process killed
+killall: udhcpc: no process killed
+killall: udhcpd: no process killed
+killall: hostapd: no process killed
+rmmod: can't unload module 'rtl8188ftv': No such file or directory
+rmmod: can't unload module 'ak_hcd': No such file or directory
+rmmod: can't unload module 'usbcore': No such file or directory
+rmmod: can't unload module 'usb_common': No such file or directory
+rmmod: can't unload module 'cfg80211': No such file or directory
+/etc/config/wifi_driver_new.sh: line 64: /tmp/hostapd: not found
+Fixed MAC 78:22:88:B8:21:11
+start service......
+sh: can't open '/usr/sbin/onvif_start.sh': No such file or directory
+start ipc service......
+***************************************
+*****A monitor daemon has running!*****
+***************************************
+********** Watch Dog Enabled! **********
+watchdog timeout = 10(s)
+enter feed_watchdog threadenter monitor_thread
+interval: 3(sec), fifo[/tmp/daemon_fifo].size=50
+echo 1 > /tmp/camera_start_times
+tf_mount.sh
+[      AI][1970-01-01 00:00:12 078] [ak_ai_open:838] ai version: libplat_ai V1.11.02
+[      AI][1970-01-01 00:00:12 123] [ak_ai_set_frame_length:1157] set frame length is the same, length =512
+[      AI][1970-01-01 00:00:12 207] [ak_ai_set_aslc_attr:2349] ak_ai_set_aslc_attr success
+[      AI][1970-01-01 00:00:12 208] [ak_ai_set_gain:1273] set gain 3
+adc get gain: 3
+set DEV volume 2
+[      AI][1970-01-01 00:00:12 212] [ak_ai_set_eq_attr:1909] eq_attr->enable = 0
+[      AI][1970-01-01 00:00:12 213] [ak_ai_set_eq_attr:1930] ak_ai_set_vqe_attr success
+[      AO][1970-01-01 00:00:12 215] [ak_ao_open:611] ao version: libplat_ao V1.11.02
+[     VQE][1970-01-01 00:00:12 259] [ak_vqe_inner_open:2011] ak_vqe_inner_open entry...ai_vqe = (nil), ao_vqe = 0x618494
+[    ECHO][1970-01-01 00:00:12 271] ## --AudioFilter Version V1.15.13, Echo--
+[    ECHO][1970-01-01 00:00:12 272] ## jitterBuf: 0x618548
+[    ECHO][1970-01-01 00:00:12 274] ## _SD_Echo_Open far_path (0x619100)
+[      AI][1970-01-01 00:00:12 291] [capture_pcm_thread:538] thread id: 622
+[     VQE][1970-01-01 00:00:12 298] [ak_vqe_inner_open:2011] ak_vqe_inner_open entry...ai_vqe = 0x618284, ao_vqe = (nil)
+[    ECHO][1970-01-01 00:00:12 313] ## Echo: [    ECHO][1970-01-01 00:00:12 314] load far_Volume[    ECHO][1970-01-01 00:00:12 315] 
+[    ECHO][1970-01-01 00:00:12 316] ## ASLC OPEN OK ena:1, lookAheadLen:48
+[     VQE][1970-01-01 00:00:12 318] [get_nr_param:1336] nr not open
+ [    ECHO][1970-01-01 00:00:12 345] ## --AudioFilter Version V1.15.13, Echo--
+[    ECHO][1970-01-01 00:00:12 346] ## jitterBuf: 0x61ff10
+[    ECHO][1970-01-01 00:00:12 347] ## _SD_Echo_Open near_path (0x61fe48)
+[    ECHO][1970-01-01 00:00:12 380] ## Echo: [    ECHO][1970-01-01 00:00:12 381] load NR[    ECHO][1970-01-01 00:00:12 382]  (enable)
+[    ECHO][1970-01-01 00:00:12 383] ## Echo: [    ECHO][1970-01-01 00:00:12 383] set AGC param[    ECHO][1970-01-01 00:00:12 384]  (enable)
+[    ECHO][1970-01-01 00:00:12 385] ## Echo: [    ECHO][1970-01-01 00:00:12 385] load near_Volume[    ECHO][1970-01-01 00:00:12 386] 
+[    ECHO][1970-01-01 00:00:12 387] ## ASLC OPEN OK ena:1, lookAheadLen:48
+[     VQE][1970-01-01 00:00:12 388] [set_ai_veq:1852] aec need to open
+ [    ECHO][1970-01-01 00:00:12 389] ## Echo: [    ECHO][1970-01-01 00:00:12 390] unload VAD
+[    ECHO][1970-01-01 00:00:12 433] ## Echo: [    ECHO][1970-01-01 00:00:12 435] load AEC[    ECHO][1970-01-01 00:00:12 436]  (enable)
+osal_loopback_open success
+[     VQE][1970-01-01 00:00:12 438] [loopback_start:1273] aec enable, osal_loopback_open ok
+ [     VQE][1970-01-01 00:00:12 439] [loopback_start:1282] create capture pcm thread OK
+[     VQE][1970-01-01 00:00:12 440] [loopback_thread:1159] thread id: 623
+[     VQE][1970-01-01 00:00:12 463] [ak_vqe_inner_open:2100] ak_vqe_inner_open exit...
+[     VQE][1970-01-01 00:00:12 465] [ak_vqe_inner_set_ai_jitterbuf_upperBound:3351] osal_vqe_get_dac entry...
+[    ECHO][1970-01-01 00:00:12 467] ## Echo: [    ECHO][1970-01-01 00:00:12 469] set near_JitterBuf param[     VQE][1970-01-01 00:00:12 470] [ak_vqe_inner_open:2100] ak_vqe_inner_open exit...
+[    ECHO][1970-01-01 00:00:12 471] 
+[     VQE][1970-01-01 00:00:12 473] [ak_vqe_inner_set_ai_jitterbuf_upperBound:3372] exit...
+[      AO][1970-01-01 00:00:12 477] [play_pcm_thread:283] thread id: 624
+[    ECHO][1970-01-01 00:00:12 496] ## sync at ts 12482
+-----dac set source
+[      AO][1970-01-01 00:00:12 513] [ak_ao_open:642] leaved...
+[    ECHO][1970-01-01 00:00:12 516] ## Echo: [    ECHO][1970-01-01 00:00:12 518] load far_NR[    ECHO][1970-01-01 00:00:12 519]  (enable)
+[      AO][1970-01-01 00:00:12 537] [ak_ao_set_nr_attr:1363] leave...
+[    ECHO][1970-01-01 00:00:12 539] ## Echo: [    ECHO][1970-01-01 00:00:12 540] set far_Volume param[    ECHO][1970-01-01 00:00:12 541] 
+[    ECHO][1970-01-01 00:00:12 557] ## Echo: [    ECHO][1970-01-01 00:00:12 559] set AEC param[    ECHO][1970-01-01 00:00:12 560]  (enable)
+[     VQE][1970-01-01 00:00:12 561] [loopback_start:1256] loopback start already
+ [      AO][1970-01-01 00:00:12 596] [ak_ao_set_aslc_attr:1290] leave...
+[      AO][1970-01-01 00:00:12 597] [ak_ao_set_gain:789] set gain 4
+[    ECHO][1970-01-01 00:00:12 601] ## Echo: [    ECHO][1970-01-01 00:00:12 602] load far_EQ[    ECHO][1970-01-01 00:00:12 603] 
+[      AO][1970-01-01 00:00:12 626] [ak_ao_set_eq_attr:1041] leave...
+[     VQE][1970-01-01 00:00:12 627] [get_hs_param:1318] howling suppress not open
+ [     VQE][1970-01-01 00:00:12 628] [ak_vqe_inner_get_ao_hs:3562] exit...
+[    ECHO][1970-01-01 00:00:12 629] ## Echo: [    ECHO][1970-01-01 00:00:12 630] load far_HowlingSuppress[    ECHO][1970-01-01 00:00:12 631] 
+[      AO][1970-01-01 00:00:12 651] [ak_ao_enable_hs:1586] leave...
+82,64,2
+[      AI][1970-01-01 00:00:12 654] [ak_ai_set_gain:1273] set gain 0
+-----dac set source
+[      AO][1970-01-01 00:00:12 682] [ak_ao_set_gain:789] set gain 0
+[      AI][1970-01-01 00:00:12 719] [ak_ai_set_gain:1273] set gain 3
+adc get gain: 2
+[      AO][1970-01-01 00:00:12 724] [ak_ao_get_volume:928] leave...
+[    AENC][1970-01-01 00:00:12 729] [ak_aenc_open:1091] aenc version: libmpi_aenc V1.1.16
+[AUDIO_TOOL][1970-01-01 00:00:12 731] [audio_tool_server:1427] thread tid: 626
+[AUDIO_TOOL][1970-01-01 00:00:12 735] [audio_tool_server_start:1289] waiting for connect ...
+[ SD_AENC][1970-01-01 00:00:12 832] ## -- AudioCodec Version V1.21.09, type: 4[ SD_AENC][1970-01-01 00:00:12 833] , aac enc[ SD_AENC][1970-01-01 00:00:12 837]  --
+[ SD_AENC][1970-01-01 00:00:12 838] ##	sr(8000), ich(1), och(1), bitrate(16000)
+[ SD_AENC][1970-01-01 00:00:12 936] ## _SD_Encode_Open OK (0x63d240)
+[    ADEC][1970-01-01 00:00:12 946] [ak_adec_open:877] adec version: libmpi_adec V1.3.08
+[    ADEC][1970-01-01 00:00:12 950] [set_decoder_input:408] decode type=2: MP3
+[    ADEC][1970-01-01 00:00:12 952] [set_decoder_input:461] sample_rate=8000, channel_num=1, sample_bits=16
+[ SD_ADEC][1970-01-01 00:00:12 953] ## -- AudioCodec Version V1.21.09, type: 2[ SD_ADEC][1970-01-01 00:00:12 954] , mp3 dec[ SD_ADEC][1970-01-01 00:00:12 955]  (V2 32bit)[ SD_ADEC][1970-01-01 00:00:12 956]  --
+[ SD_ADEC][1970-01-01 00:00:12 958] ## MP3 dec V2 32bit open ok
+[ SD_ADEC][1970-01-01 00:00:12 960] ## len_buf_in=20480, inbufminlen=4096
+[ SD_ADEC][1970-01-01 00:00:12 961] ## _SD_Decode_Open OK (0x63eac0)
+[ SD_ADEC][1970-01-01 00:00:12 964] ## inbufminlen is set to 128
+[    ADEC][1970-01-01 00:00:12 986] [ak_adec_open:877] adec version: libmpi_adec V1.3.08
+[    ADEC][1970-01-01 00:00:12 993] [set_decoder_input:445] decode type=18: PCM_ULAW
+[    ADEC][1970-01-01 00:00:12 997] [set_decoder_input:461] sample_rate=8000, channel_num=1, sample_bits=16
+[ SD_ADEC][1970-01-01 00:00:12 998] ## -- AudioCodec Version V1.21.09, type: 18[ SD_ADEC][1970-01-01 00:00:12 999] , g711 dec[ SD_ADEC][1970-01-01 00:00:13 000]  --
+[ SD_ADEC][1970-01-01 00:00:13 002] ## len_buf_in=20480, inbufminlen=16384
+[ SD_ADEC][1970-01-01 00:00:13 003] ## _SD_Decode_Open OK (0x63d3a8)
+[ SD_ADEC][1970-01-01 00:00:13 004] ## inbufminlen is set to 128
+[      VI][1970-01-01 00:00:13 040] [ak_vi_open:388] register device, device id:[0]
+[      VI][1970-01-01 00:00:13 041] new device
+[      VI][1970-01-01 00:00:13 042] [vi_register_device:269] new dev=0x65c2c0
+ispsdk_lib version:libplat_isp_sdk V7.0.01 
+open isp dev: /dev/isp-param-0
+--- AK_ISP_sdk_init g_isp_fd[0]=12 ---
+[      VI][1970-01-01 00:00:13 054] [vi_dev_open:215] vi device open DEV0!
+[      VI][1970-01-01 00:00:13 055] [vi_dev_open:228] open sensor dev: /dev/v4l-subdev0
+[      VI][1970-01-01 00:00:13 056] [vi_dev_open:238] --- vi_dev_open g_sensor_fd[0]=13 ---
+[      VI][1970-01-01 00:00:13 060] [vi_dev_open_td_chn:153] vi third chn device open CHN16!
+[      VI][1970-01-01 00:00:13 061] register vi device ok, dev_count=1
+[    VPSS][1970-01-01 00:00:13 074] [isp_open:84] dev:0 already opened!
+[    VPSS][1970-01-01 00:00:13 148] [isp.conf]version: V2_021002, sensor id: 0x2336, style id: 0
+[    VPSS][1970-01-01 00:00:13 149] isp subfile 0, modify time: 2023-2-10 14:43:53
+[    VPSS][1970-01-01 00:00:13 150] 1/ÓÅ¯È²ÊÍÏÓ£¬µ÷ÕûÒÊÓÁÁ¶ÈÍÇåÎú¶È
+
+
+[    VPSS][1970-01-01 00:00:13 152] isp subfile 1sc2336_cropcap bounds.width:1920, bounds.height:1080
+, modify time: 2023-2-10 14:42:01
+[    VPSS][1970-01-01 00:00:13 153] 1.Ôö¼Ólsc
+
+[    VPSS][1970-01-01 00:00:13 157] isp subfile 2, modify time: 2023-2-10 14:43:10
+[    VPSS][1970-01-01 00:00:13 158] 1.¿í¶¯ÌÄÊ
+
+
+[    VPSS][1970-01-01 00:00:13 159] [check_file:413] check isp cfg: /etc/config/isp_sc2336_mipi_2sc2336_cropcap bounds.width:1920, bounds.height:1080
+lane_h3b.conf OK
+[    VPSS][1970-01-01 00:00:13 161] [issc2336_s_crop 782, left:0, top:0, width:1920, height:1080
+p_module_init:1529] chipid:0x20160101 !
+[    VPSS][1970-01-0sc2336_cropcap bounds.width:1920, bounds.height:1080
+1 00:00:13 165] [check_fps_para:468] hight light:
+	frame_rate=14 max_exp_time=2385 low_light_gain=26
+[    VPSS][1970-01-01 00:00:13 166] [check_fps_para:473] low light:
+	frame_rate=14 max_exp_time=2385 light_gain=12
+[    VPSS][1970-01-01 00:00:13 167] [init_fps_info:600] hight light fps: 14
+[    VPSS][1970-01-01 00:00:13 168] [isp_set_sensor_fps:2633] set sensor fps: 14
+[    VPSS][1970-01-01 00:00:13 170] [set_fps:236] set dev:0 fps:14 ok
+[      VI][1970-01-01 00:00:13 185] vi_dev_get_sensor_crop 141, ret:0, w:1920, h:1080
+tf_mount.sh
+[      VI][1970-01-01 00:00:13 240] init CROP succeedded! reset to CROP[1920, 1080]
+[      VI][1970-01-01 00:00:13 257] [ak_vi_set_chn_attr:1087] chn[0] frame_rate[15] frame_num[15],frame_den[0], iset_interface mipi
+nterval[66]
+[      VI][1970-01-01 00:00:13 258] [ak_vi_set_chn_set_pclk_polar pclk edge is falling
+attr:1102] success register vi channel[0]
+[      VI][1970-01-01 00:00:13 260] [vi_dev_set_chn_res:499] chn id is[0], fd is:[14]
+[      VI][1970-01-01 00:00:13 261] [vi_dev_set_chn_res:532] vi_dev_set_chn_res w:1920, h:1080
+[      VI][1970-01-01 00:00:13 262] [vi_set_channel_attr:802] set vi channel[0] res w[1920] h[1080]
+[      VI][1970-01-01 00:00:13 275] [ak_vi_set_chn_attr:1087] chn[1] frame_rate[15] frame_num[15],frame_den[0], interval[66]
+[      VI][1970-01-01 00:00:13 276] [ak_vi_set_chn_attr:1102] success register vi channel[1]
+[      VI][1970-01-01 00:00:13 277] [vi_dev_set_chn_res:499] chn id is[1], fd is:[15]
+[      VI][1970-01-01 00:00:13 279] [vi_dev_set_chn_res:532] vi_dev_set_chn_res w:640, h:360
+[      VI][1970-01-01 00:00:13 280] [vi_set_channel_attr:802] set vi channel[1] res w[640] h[360]
+[      VI][1970-01-01 00:00:13 295] [malloc_capture_buffers:1068] channel[0] alloc n_buffers:0, paddr:2172346368, vaddr:0xb6617000, length:3110400
+[      VI][1970-01-01 00:00:13 297] [malloc_capture_buffers:1068] channel[0] alloc n_buffers:1, paddr:2175459328, vaddr:0xb631f000, length:3110400
+[      VI][1970-01-01 00:00:13 298] [malloc_capture_buffers:1068] channel[0] alloc n_buffers:2, paddr:2178572288, vaddr:0xb6027000, length:3110400
+sc2336_sensor_get_parameter_func param:8199 not support
+[      VI][1970-01-01 00:00:13 588] [vi_set_capture_on:1173] vi channel [0] is started!
+[      VI][1970-01-01 00:00:13 589] [malloc_capture_buffers:1068] channel[1] alloc n_buffers:0, paddr:2181685248, vaddr:0xb5fd2000, length:345600
+[      VI][1970-01-01 00:00:13 593] [malloc_capture_buffers:1068] channel[1] alloc n_buffers:1, paddr:2182033408, vaddr:0xb5f7d000, length:345600
+[      VI][1970-01-01 00:00:13 595] [malloc_capture_buffers:1068] channel[1] alloc n_buffers:2, paddr:2182381568, vaddr:0xb5f28000, length:345600
+[      VI][1970-01-01 00:00:13 596] [vi_set_capture_on:1173] vi channel [1] is started!
+[      VI][1970-01-01 00:00:13 604] [ak_vi_enable_chn:1258] set channel [0] capture on
+[      VI][1970-01-01 00:00:13 609] [ak_vi_enable_chn:1258] set channel [1] capture on
+find name video-encoder uio index 0
+[    VPSS][1970-01-01 00:00:13 618] [isp_tool_server:920] thread tid: 633
+[    VENC][1970-01-01 00:00:13 619] [venc_cb_init_reg:302] mapping, start: 0x20020000, len: 0x00010000
+[     DRV][1970-01-01 00:00:13 623] Found uio0 mapping for 0x20020000
+[    VPSS][1970-01-01 00:00:13 624] [isp_conn_run:749] waiting for connect ...
+[    VPSS][1970-01-01 00:00:13 625] [isp_tool_server:926] exit thread tid: 633
+[    VENC][1970-01-01 00:00:13 628] [venc_cb_init_reg:322] init venc reg, va: 0xb5eb4000, pa: 0x20020000, len: 0x00010000
+[AKV_VENC][1970-01-01 00:00:13 840] --AKV Encoder Lib V3.0.29--
+[AKV_VENC][1970-01-01 00:00:13 863] ## AKV_Encoder_Init OK!
+[    VENC][1970-01-01 00:00:13 882] [ak_venc_open:1301] open count = 1
+[    VENC][1970-01-01 00:00:13 895] [ak_venc_open:1348] we don't use config for encode
+[AKV_VENC][1970-01-01 00:00:13 905] ## AKV_Encoder_Open OK, handle=0x65af90, stream buf size = 512000
+[AKV_VENC][1970-01-01 00:00:13 906] ##	eProfile       = AVC_MAIN
+[AKV_VENC][1970-01-01 00:00:13 908] ##	FrameWidth     = 1920
+[AKV_VENC][1970-01-01 00:00:13 909] ##	FrameHeight    = 1080
+[AKV_VENC][1970-01-01 00:00:13 910] ##	eRCMode        = VBR
+[AKV_VENC][1970-01-01 00:00:13 911] ##	eChromaMode    = CHROMA_4_2_0
+[AKV_VENC][1970-01-01 00:00:13 913] ##	TargetBitRate  = 768
+[AKV_VENC][1970-01-01 00:00:13 914] ##	MaxBitRate     = 1024
+[AKV_VENC][1970-01-01 00:00:13 915] ##	EncFrameRate   = 15
+[AKV_VENC][1970-01-01 00:00:13 916] ##	InitialSliceQP = 35
+[AKV_VENC][1970-01-01 00:00:13 917] ##	MinQP          = 28(28)
+[AKV_VENC][1970-01-01 00:00:13 918] ##	MaxQP          = 43(40)
+[AKV_VENC][1970-01-01 00:00:13 919] ##	GopLength      = 30
+[AKV_VENC][1970-01-01 00:00:13 924] ##	GopNumB        = 0
+[AKV_VENC][1970-01-01 00:00:13 926] ##	NumSlices      = 1
+[AKV_VENC][1970-01-01 00:00:13 927] ##	SmartMode      = DISABLE
+[AKV_VENC][1970-01-01 00:00:13 929] ##	SmartGopLength = 100
+[AKV_VENC][1970-01-01 00:00:13 930] ##	SmartQuality   = 50
+[AKV_VENC][1970-01-01 00:00:13 932] ##	SmartStaticValue = 0
+[AKV_VENC][1970-01-01 00:00:13 934] ##	MaxPictureSize = 0
+[AKV_VENC][1970-01-01 00:00:13 936] ##	EncLevel       = 50
+[AKV_VENC][1970-01-01 00:00:13 937] ##	QuantTableLevel = DEFAULT
+[AKV_VENC][1970-01-01 00:00:13 939] ## AKV: L2 Cache Enabled.
+[    VENC][1970-01-01 00:00:13 940] [ak_venc_open:1363] Video encoder open success
+[    VENC][1970-01-01 00:00:13 942] [ak_venc_open:1373] 
+	params: w=1920, h=1080, qpmin=28, qpmax=43,bps=768, gop=30, fps=15, profile=16777293
+[    VENC][1970-01-01 00:00:14 035] [ak_venc_open:1417] exit....
+[    VENC][1970-01-01 00:00:14 037] [ak_venc_open:1301] open count = 2
+[    VENC][1970-01-01 00:00:14 042] [ak_venc_open:1348] we don't use config for encode
+[AKV_VENC][1970-01-01 00:00:14 055] ## AKV_Encoder_Open OK, handle=0x676060, stream buf size = 86400
+[AKV_VENC][1970-01-01 00:00:14 056] ##	eProfile       = AVC_MAIN
+[AKV_VENC][1970-01-01 00:00:14 057] ##	FrameWidth     = 640
+[AKV_VENC][1970-01-01 00:00:14 058] ##	FrameHeight    = 360
+[AKV_VENC][1970-01-01 00:00:14 059] ##	eRCMode        = VBR
+[AKV_VENC][1970-01-01 00:00:14 060] ##	eChromaMode    = CHROMA_4_2_0
+[AKV_VENC][1970-01-01 00:00:14 063] ##	TargetBitRate  = 256
+[AKV_VENC][1970-01-01 00:00:14 064] ##	MaxBitRate     = 512
+[AKV_VENC][1970-01-01 00:00:14 066] ##	EncFrameRate   = 15
+[AKV_VENC][1970-01-01 00:00:14 067] ##	InitialSliceQP = 35
+[AKV_VENC][1970-01-01 00:00:14 069] ##	MinQP          = 25(25)
+[AKV_VENC][1970-01-01 00:00:14 070] ##	MaxQP          = 45(45)
+[AKV_VENC][1970-01-01 00:00:14 072] ##	GopLength      = 30
+[AKV_VENC][1970-01-01 00:00:14 074] ##	GopNumB        = 0
+[AKV_VENC][1970-01-01 00:00:14 076] ##	NumSlices      = 1
+[AKV_VENC][1970-01-01 00:00:14 077] ##	SmartMode      = DISABLE
+[AKV_VENC][1970-01-01 00:00:14 079] ##	SmartGopLength = 100
+[AKV_VENC][1970-01-01 00:00:14 083] ##	SmartQuality   = 50
+[AKV_VENC][1970-01-01 00:00:14 085] ##	SmartStaticValue = 0
+[AKV_VENC][1970-01-01 00:00:14 086] ##	MaxPictureSize = 0
+[AKV_VENC][1970-01-01 00:00:14 088] ##	EncLevel       = 50
+[AKV_VENC][1970-01-01 00:00:14 089] ##	QuantTableLevel = DEFAULT
+[AKV_VENC][1970-01-01 00:00:14 091] ## AKV: L2 Cache Enabled.
+[    VENC][1970-01-01 00:00:14 092] [ak_venc_open:1363] Video encoder open success
+[    VENC][1970-01-01 00:00:14 097] [ak_venc_open:1373] 
+	params: w=640, h=360, qpmin=25, qpmax=45,bps=256, gop=30, fps=15, profile=16777293
+[AKV_VENC][1970-01-01 00:00:14 183] ## Force inserting I frame ##
+[    VENC][1970-01-01 00:00:14 185] [ak_venc_open:1417] exit....
+[    VENC][1970-01-01 00:00:14 187] [ak_venc_open:1301] open count = 3
+[    VENC][1970-01-01 00:00:14 192] [ak_venc_open:1348] we don't use config for encode
+[AKV_VENC][1970-01-01 00:00:14 194] ## Adjust jpeg MinQP to 1, MaxQP to 100
+[AKV_VENC][1970-01-01 00:00:14 200] ## AKV_Encoder_Open OK, handle=0x690270, stream buf size = 86400
+[AKV_VENC][1970-01-01 00:00:14 202] ##	eProfile       = JPEG
+[AKV_VENC][1970-01-01 00:00:14 203] ##	FrameWidth     = 640
+[AKV_VENC][1970-01-01 00:00:14 205] ##	FrameHeight    = 360
+[AKV_VENC][1970-01-01 00:00:14 207] ##	eRCMode        = VBR
+[AKV_VENC][1970-01-01 00:00:14 211] ##	eChromaMode    = CHROMA_4_2_0
+[AKV_VENC][1970-01-01 00:00:14 212] ##	TargetBitRate  = 256
+[AKV_VENC][1970-01-01 00:00:14 214] ##	MaxBitRate     = 512
+[AKV_VENC][1970-01-01 00:00:14 220] ##	EncFrameRate   = 15
+[AKV_VENC][1970-01-01 00:00:14 221] ##	InitialSliceQP = 35
+[AKV_VENC][1970-01-01 00:00:14 223] ##	MinQP          = 25
+[AKV_VENC][1970-01-01 00:00:14 224] ##	MaxQP          = 45
+[AKV_VENC][1970-01-01 00:00:14 227] ##	GopLength      = 30
+[AKV_VENC][1970-01-01 00:00:14 228] ##	GopNumB        = 0
+[AKV_VENC][1970-01-01 00:00:14 230] ##	NumSlices      = 1
+[AKV_VENC][1970-01-01 00:00:14 231] ##	SmartMode      = DISABLE
+[APP_VIDEO][1970-01-01 00:00:14 234] [app_video_vi_stream_do_venc:550] Chn[0] cur frame ts[14233], start_time[0], total_frame[0], cur_int[14233], int[66]!
+[AKV_VENC][1970-01-01 00:00:14 233] ##	SmartGopLength = 100
+[AKV_VENC][1970-01-01 00:00:14 236] ##	SmartQuality   = 50
+[AKV_VENC][1970-01-01 00:00:14 238] ##	SmartStaticValue = 0
+[AKV_VENC][1970-01-01 00:00:14 239] ##	MaxPictureSize = 0
+[AKV_VENC][1970-01-01 00:00:14 243] ##	EncLevel       = 50
+[AKV_VENC][1970-01-01 00:00:14 244] ##	QuantTableLevel = DEFAULT
+[AKV_VENC][1970-01-01 00:00:14 245] ## AKV: L2 Cache Disabled.
+[    VENC][1970-01-01 00:00:14 246] [ak_venc_open:1363] Video encoder open success
+[    VENC][1970-01-01 00:00:14 247] [ak_venc_open:1373] 
+	params: w=640, h=360, qpmin=25, qpmax=45,bps=256, gop=30, fps=15, profile=67108864
+[    VENC][1970-01-01 00:00:14 331] [ak_venc_open:1417] exit....
+[AKV_VENC][1970-01-01 00:00:14 348] ## max nalu size = 6564, type: I, stream 0x65af90
+[AKV_VENC][1970-01-01 00:00:14 354] ## max nalu size = 1442, type: I, stream 0x676060
+[AKV_VENC][1970-01-01 00:00:14 394] ## max nalu size = 1581, type: P, stream 0x676060
+[    ADEC][1970-01-01 00:00:14 505] [ak_adec_send_stream_end:1236] adec send stream no start
+[ SD_ADEC][1970-01-01 00:00:14 507] ## Echo: [ SD_ADEC][1970-01-01 00:00:14 509] set AGC param[     OSD][1970-01-01 00:00:14 511] [get_font_data_from_file:102] fp:0x68fc40 byte:32
+[ SD_ADEC][1970-01-01 00:00:14 515]  (enable)
+[ SD_ADEC][1970-01-01 00:00:14 659] ## Echo: [ SD_ADEC][1970-01-01 00:00:14 660] set NR param[ SD_ADEC][1970-01-01 00:00:14 662]  (enable)
+[     VQE][1970-01-01 00:00:14 684] [ak_vqe_inner_set_ai_aec:2300] aec need to open
+ [ SD_ADEC][1970-01-01 00:00:14 686] ## Echo: [ SD_ADEC][1970-01-01 00:00:14 687] set AEC param[ SD_ADEC][1970-01-01 00:00:14 688]  (enable)
+[     VQE][1970-01-01 00:00:14 693] [loopback_start:1256] loopback start already
+ [ SD_ADEC][1970-01-01 00:00:14 886] ## Echo: [ SD_ADEC][1970-01-01 00:00:14 887] set near_Volume param[ SD_ADEC][1970-01-01 00:00:14 888] 
+[      AI][1970-01-01 00:00:14 904] [ak_ai_set_aslc_attr:2349] ak_ai_set_aslc_attr success
+[      AI][1970-01-01 00:00:14 906] [ak_ai_set_gain:1273] set gain 3
+adc get gain: 2
+[ SD_ADEC][1970-01-01 00:00:14 915] ## Echo: [ SD_ADEC][1970-01-01 00:00:14 917] load near_EQ[ SD_ADEC][1970-01-01 00:00:14 918] 
+[     OSD][1970-01-01 00:00:14 947] [ak_osd_LoadBitmap:516] success init
+[      AI][1970-01-01 00:00:14 959] [ak_ai_set_eq_attr:1930] ak_ai_set_vqe_attr success
+[ SD_ADEC][1970-01-01 00:00:14 966] ## Echo: [ SD_ADEC][1970-01-01 00:00:14 967] set far_NR param[ SD_ADEC][1970-01-01 00:00:14 971]  (enable)
+MAINCHN0 iomap c29c0000 829c0000 size:24576
+SUBCHN0 iomap c29d2000 829d2000 size:6656
+[      AO][1970-01-01 00:00:15 028] [ak_ao_set_nr_attr:1363] leave...
+[ SD_ADEC][1970-01-01 00:00:15 029] ## Echo: [ SD_ADEC][1970-01-01 00:00:15 030] set far_Volume param[ SD_ADEC][1970-01-01 00:00:15 031] 
+[ SD_ADEC][1970-01-01 00:00:15 050] ## Echo: [ SD_ADEC][1970-01-01 00:00:15 052] set AEC param[ SD_ADEC][1970-01-01 00:00:15 054]  (enable)
+[     VQE][1970-01-01 00:00:15 056] [loopback_start:1256] loopback start already
+ [AKV_VENC][1970-01-01 00:00:15 092] ## max nalu size = 6859, type: P, stream 0x65af90
+[      AO][1970-01-01 00:00:15 108] [ak_ao_set_aslc_attr:1290] leave...
+[ SD_ADEC][1970-01-01 00:00:15 109] ## Echo: [ SD_ADEC][1970-01-01 00:00:15 110] set far_EQ param[ SD_ADEC][1970-01-01 00:00:15 117] 
+[      AO][1970-01-01 00:00:15 147] [ak_ao_set_eq_attr:1041] leave...
+/usr/sbin/blue_led.sh off
+[AKV_VENC][1970-01-01 00:00:15 164] ## max nalu size = 1742, type: P, stream 0x676060
+/usr/sbin/blue_led.sh: line 33: can't create /sys/class/leds/blue_led/brightness: nonexistent directory
+/usr/sbin/blue_led.sh: line 39: can't create /sys/class/leds/blue_led/brightness: nonexistent directory
+/usr/sbin/red_led.sh off
+/usr/sbin/red_led.sh: line 33: can't create /sys/class/leds/red_led/brightness: nonexistent directory
+/usr/sbin/red_led.sh: line 39: can't create /sys/class/leds/red_led/brightness: nonexistent directory
+/usr/sbin/red_led.sh on
+/usr/sbin/red_led.sh: line 33: can't create /sys/class/leds/red_led/brightness: nonexistent directory
+/usr/sbin/state_led.sh off
+/usr/sbin/state_led.sh on
+########MRD Lib V1.0.06########sc2336_cropcap bounds.width:1920, bounds.height:1080
+
+[      VI][1970-01-01 00:00:15 274] vi_dev_get_sensor_crop 141, ret:0, w:1920, h:1080
+[      MD][1970-01-01 00:00:15 286] [md_thread:443] thread id : 651
+[      MD][1970-01-01 00:00:15 314] [ak_md_set_sensitivity:691] sensitivity:50 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+[      MD][1970-01-01 00:00:15 337] [ak_md_enable:1070] enable:0
+echo 42 > /sys/class/gpio/export
+echo low > /sys/class/gpio/gpio42/direction
+echo 41 > /sys/class/gpio/export
+echo high > /sys/class/gpio/gpio41/direction
+echo 1 > /sys/class/gpio/gpio42/value
+echo 0 > /sys/class/gpio/gpio41/value
+[AKV_VENC][1970-01-01 00:00:15 651] ## max nalu size = 10629, type: P, stream 0x65af90
+[AKV_VENC][1970-01-01 00:00:15 654] ## max nalu size = 3662, type: P, stream 0x676060
+echo 0 > /sys/class/gpio/gpio42/value
+echo 0 > /sys/class/gpio/gpio42/value
+echo 1 > /sys/class/gpio/gpio41/value
+[AKV_VENC][1970-01-01 00:00:16 350] ## max nalu size = 14791, type: I, stream 0x65af90
+echo 1 > /sys/class/gpio/gpio42/value
+touch /tmp/ircut_has_reset_flag
+echo 0 > /sys/devices/platform/leds/leds/ir_led/brightness
+[    VPSS][1970-01-01 00:00:16 953] [set_auto_day_night_param:341] (switch day_night) D_to_N=2000 ,N_to_D=1000,lock_time=1800000
+[    VPSS][1970-01-01 00:00:16 955] [set_auto_day_night_param:344] 0--100000
+[    VPSS][1970-01-01 00:00:16 959] [set_auto_day_night_param:344] 1--100000
+[    VPSS][1970-01-01 00:00:16 962] [set_auto_day_night_param:344] 2--100000
+[    VPSS][1970-01-01 00:00:16 966] [set_auto_day_night_param:344] 3--100000
+[    VPSS][1970-01-01 00:00:16 968] [set_auto_day_night_param:344] 4--100000
+[    VPSS][1970-01-01 00:00:16 970] [set_auto_day_night_param:347] 0--1800000
+[    VPSS][1970-01-01 00:00:16 972] [set_auto_day_night_param:347] 1--300000
+[    VPSS][1970-01-01 00:00:16 975] [set_auto_day_night_param:347] 2--300000
+[    VPSS][1970-01-01 00:00:16 977] [set_auto_day_night_param:347] 3--300000
+[    VPSS][1970-01-01 00:00:16 979] [set_auto_day_night_param:347] 4--300000
+[    VPSS][1970-01-01 00:00:16 982] [set_auto_day_night_param:347] 5--300000
+[    VPSS][1970-01-01 00:00:16 985] [set_auto_day_night_param:347] 6--300000
+[    VPSS][1970-01-01 00:00:16 986] [set_auto_day_night_param:347] 7--300000
+[    VPSS][1970-01-01 00:00:16 990] [set_auto_day_night_param:347] 8--300000
+[    VPSS][1970-01-01 00:00:16 991] [set_auto_day_night_param:347] 9--2000000
+[    AENC][1970-01-01 00:00:16 993] [ak_aenc_open:1091] aenc version: libmpi_aenc V1.1.16
+[ SD_AENC][1970-01-01 00:00:17 008] ## -- AudioCodec Version V1.21.09, type: 4[ SD_AENC][1970-01-01 00:00:17 010] , aac enc[ SD_AENC][1970-01-01 00:00:17 012]  --
+[ SD_AENC][1970-01-01 00:00:17 013] ##	sr(8000), ich(1), och(1), bitrate(16000)
+[ SD_AENC][1970-01-01 00:00:17 017] ## _SD_Encode_Open OK (0x6ac3a8)
+[    ADEC][1970-01-01 00:00:17 155] [ak_adec_send_stream_end:1242] called, decode free size=17884
+[ SD_AENC][1970-01-01 00:00:17 157] ## SetBufferMode: 1
+[      AI][1970-01-01 00:00:17 293] [ak_ai_set_gain:1273] set gain 0
+-----dac set source
+[      AO][1970-01-01 00:00:17 324] [ak_ao_set_gain:789] set gain 3
+[      AI][1970-01-01 00:00:17 376] [ak_ai_set_gain:1273] set gain 3
+adc get gain: 2
+killall -9 "udhcpc" > /dev/null
+killall: udhcpc: no process killed
+ifconfig eth0 0.0.0.0
+ifconfig: SIOCSIFADDR: No such device
+[      AI][1970-01-01 00:00:19 796] [ak_ai_set_gain:1273] set gain 0
+-----dac set source
+[      AO][1970-01-01 00:00:19 838] [ak_ao_set_gain:789] set gain 0
+[      AI][1970-01-01 00:00:19 877] [ak_ai_set_gain:1273] set gain 3
+adc get gain: 2
+killall -9 telnetd
+# telnetd
+telnetd
+Enter unblock_system_func thread!:: telnetd 
+Exit unblock_system_func thread!:: telnetd. -1 - 0
+/usr/sbin/red_led.sh blink 250 250
+cat: can't open '/sys/class/leds/red_led/brightness': No such file or directory
+sh: bad number
+/usr/sbin/red_led.sh: line 50: can't create /sys/class/leds/red_led/trigger: nonexistent directory
+/usr/sbin/red_led.sh: line 51: can't create /sys/class/leds/red_led/delay_off: nonexistent directory
+/usr/sbin/red_led.sh: line 52: can't create /sys/class/leds/red_led/delay_on: nonexistent directory
+/usr/sbin/blue_led.sh blink 250 250
+cat: can't open '/sys/class/leds/blue_led/brightness': No such file or directory
+sh: bad number
+/usr/sbin/blue_led.sh: line 50: can't create /sys/class/leds/blue_led/trigger: nonexistent directory
+/usr/sbin/blue_led.sh: line 51: can't create /sys/class/leds/blue_led/delay_off: nonexistent directory
+/usr/sbin/blue_led.sh: line 52: can't create /sys/class/leds/blue_led/delay_on: nonexistent directory
+/usr/sbin/state_led.sh blink 250 250
+[INFO  /home/hutong/work/anyka_330/SDK_V1.02_ht/platform/ipcam/lib/librtsp/src/rtsp_demo.c:281:rtsp_new_demo] rtsp server demo starting on port 554
+[DEBUG /home/hutong/work/anyka_330/SDK_V1.02_ht/platform/ipcam/lib/librtsp/src/rtsp_demo.c:481:rtsp_new_session] add session path: /main_ch
+[DEBUG /home/hutong/work/anyka_330/SDK_V1.02_ht/platform/ipcam/lib/librtsp/src/utils.c:335:rtsp_codec_data_parse_from_frame_aac] config=1588 sample_rate=8000 channels=1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[DEBUG /home/hutong/work/anyka_330/SDK_V1.02_ht/platform/ipcam/lib/librtsp/src/utils.c:160:rtsp_codec_data_parse_from_user_h264] sps 35
+[DEBUG /home/hutong/work/anyka_330/SDK_V1.02_ht/platform/ipcam/lib/librtsp/src/utils.c:168:rtsp_codec_data_parse_from_user_h264] pps 4
+########MRD Lib V1.0.06########
+[Application][1970-01-01 00:00:25 460] ########MT Lib V1.0.09########
+[AKV_VENC][1970-01-01 00:00:26 849] ## max nalu size = 14830, type: I, stream 0x65af90
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[AKV_VENC][1970-01-01 00:00:28 949] ## max nalu size = 15823, type: I, stream 0x65af90
+[AKV_VENC][1970-01-01 00:00:31 048] ## max nalu size = 17976, type: I, stream 0x65af90
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+killall -9 "udhcpc" > /dev/null
+killall: udhcpc: no process killed
+ifconfig eth0 0.0.0.0
+ifconfig: SIOCSIFADDR: No such device
+[AKV_VENC][1970-01-01 00:00:47 286] 1080 P finish the learning , and the result is : 493 kbps and QP is 28, IQP is 28, Isize is 14421
+[AKV_VENC][1970-01-01 00:00:47 358] 360 P finish the learning , and the result is : 51 kbps and QP is 25, IQP is 25, Isize is 2984
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+killall -9 "udhcpc" > /dev/null
+killall: udhcpc: no process killed
+ifconfig eth0 0.0.0.0
+ifconfig: SIOCSIFADDR: No such device
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[APP_VIDEO][1970-01-01 00:01:24 223] [app_video_vi_stream_do_venc:550] Chn[0] cur frame ts[84222], start_time[14233], total_frame[1000], cur_int[69], int[66]!
+[AKV_VENC][1970-01-01 00:01:29 840] ## max nalu size = 18323, type: I, stream 0x65af90
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[AKV_VENC][1970-01-01 00:01:31 939] ## max nalu size = 20937, type: I, stream 0x65af90
+[AKV_VENC][1970-01-01 00:01:34 039] ## max nalu size = 26518, type: I, stream 0x65af90
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[AKV_VENC][1970-01-01 00:01:36 139] ## max nalu size = 29558, type: I, stream 0x65af90
+[AKV_VENC][1970-01-01 00:01:40 338] ## max nalu size = 41755, type: I, stream 0x65af90
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[AKV_VENC][1970-01-01 00:01:42 438] ## max nalu size = 47387, type: I, stream 0x65af90
+killall -9 "udhcpc" > /dev/null
+killall: udhcpc: no process killed
+ifconfig eth0 0.0.0.0
+ifconfig: SIOCSIFADDR: No such device
+[AKV_VENC][1970-01-01 00:01:44 538] ## max nalu size = 51281, type: I, stream 0x65af90
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[AKV_VENC][1970-01-01 00:01:46 637] ## max nalu size = 53997, type: I, stream 0x65af90
+[AKV_VENC][1970-01-01 00:01:48 737] ## max nalu size = 59597, type: I, stream 0x65af90
+[AKV_VENC][1970-01-01 00:01:50 837] ## max nalu size = 61981, type: I, stream 0x65af90
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[AKV_VENC][1970-01-01 00:01:52 938] ## max nalu size = 69282, type: I, stream 0x65af90
+[AKV_VENC][1970-01-01 00:01:52 940] ## max nalu size = 3831, type: I, stream 0x676060
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+killall -9 "udhcpc" > /dev/null
+killall: udhcpc: no process killed
+ifconfig eth0 0.0.0.0
+ifconfig: SIOCSIFADDR: No such device
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[APP_VIDEO][1970-01-01 00:02:34 212] [app_video_vi_stream_do_venc:550] Chn[0] cur frame ts[154212], start_time[14233], total_frame[2000], cur_int[69], int[66]!
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+killall -9 "udhcpc" > /dev/null
+killall: udhcpc: no process killed
+ifconfig eth0 0.0.0.0
+ifconfig: SIOCSIFADDR: No such device
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+[AKV_VENC][1970-01-01 00:02:58 798] ## max nalu size = 5198, type: P, stream 0x676060
+[AKV_VENC][1970-01-01 00:02:58 942] ## max nalu size = 5420, type: P, stream 0x676060
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+
+anyka login: 
+anyka login: 172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+killall -9 "udhcpc" > /dev/null
+killall: udhcpc: no process killed
+ifconfig eth0 0.0.0.0
+ifconfig: SIOCSIFADDR: No such device
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
+172.14.0.0	*.*.*.*		wlan0	172.14.10.1
