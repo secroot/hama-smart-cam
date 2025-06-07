@@ -6,7 +6,7 @@ auf Basis des Anyka SDK. Sie enthält sowohl technische Details als auch visuell
 
 ---
 
-## 🔍 Patchstatus & Setup
+## Patchstatus & Setup
 
 # Kamera Patchstatus & Installationsweg 
 
@@ -72,7 +72,7 @@ Die Kamera wurde manuell mit einer RTSP-fähigen Version von `anyka_ipc` gepatch
 
 ---
 
-## 🐚 Session Snapshot & Laufzeitumgebung
+##  Session Snapshot & Laufzeitumgebung
 
 #  IP-Cam Exploit Session Snapshot (Busybox, Telnet, Shared Libs)
 
