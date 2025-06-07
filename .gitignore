@@ -1,0 +1,7 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore pycache
+__pycache__/
+*.py[cod]
