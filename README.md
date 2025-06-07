@@ -1,4 +1,5 @@
-# 🛠️ HAMA IP-Cam Exploit & Patch Zusammenfassung
+# HAMA SMART CAMERA 1080p HD-00176652 FW v3.10.79 auf ak3918ev330
+# IP-Cam Exploit & Patch Zusammenfassung
 
 Diese Datei dokumentiert die manuelle Patching- und Debugging-Methode für die HAMA IP-Kamera
 auf Basis des Anyka SDK. Sie enthält sowohl technische Details als auch visuelle Debug-Daten.
@@ -7,7 +8,7 @@ auf Basis des Anyka SDK. Sie enthält sowohl technische Details als auch visuell
 
 ## 🔍 Patchstatus & Setup
 
-# Kamera Patchstatus & Installationsweg (Option 3 - manuell gepatcht)
+# Kamera Patchstatus & Installationsweg 
 
 ## Setup-Methode
 
@@ -185,18 +186,5 @@ Die Kamera wurde manuell mit einer RTSP-fähigen Version von `anyka_ipc` gepatch
 
 ---
 
-## 📸 Debugbilder
-
-# 📸 Kamera Debugbilder
-
-![Debug Bild 1](docs/assets/cam_debug_01.png)
-
-![Debug Bild 2](docs/assets/cam_debug_02.png)
-
-![Debug Bild 3](docs/assets/cam_debug_03.png)
-
-![Debug Bild 4](docs/assets/cam_debug_04.png)
-
-![Debug Bild 5](docs/assets/cam_debug_05.png)
 
 
